@@ -3,6 +3,8 @@
 import { ShoppingCart, Search, Menu, Share2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import goldenring from '/media/goldern-ring.jpeg'
+import diamondring from '/media/diamond-ring.jpeg'
 
 // WhatsApp number for sharing (replace with your actual number)
 const WHATSAPP_NUMBER = '+972544281384'
@@ -11,7 +13,7 @@ interface JewelryItem {
   id: number
   name: string
   description: string
-  image: string
+  image: any
 }
 
 const jewelryItems: JewelryItem[] = [
@@ -19,13 +21,13 @@ const jewelryItems: JewelryItem[] = [
     id: 1,
     name: 'שרשרת יהלום קלאסית',
     description: 'שרשרת יהלום עדינה ואלגנטית, מושלמת לכל אירוע',
-    image: '/placeholder.svg?height=300&width=400'
+    image: diamondring
   },
   {
     id: 2,
     name: 'טבעת זהב מעוצבת',
     description: 'טבעת זהב ייחודית בעיצוב מודרני',
-    image: '/placeholder.svg?height=300&width=400'
+    image: goldenring
   },
   {
     id: 3,
