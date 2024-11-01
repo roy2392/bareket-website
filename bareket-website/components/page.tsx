@@ -3,9 +3,13 @@
 import { ShoppingCart, Search, Menu, Share2 } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import goldenring from '/media/goldern-ring.jpeg'
-import diamondring from '/media/diamond-ring.jpeg'
-import diamondearing from '/media/diamondearning.jpeg'
+import goldernwomanring from '/media/golden-woman-ring.jpeg' 
+import golderncircleearings from '/media/goldern-circle-earings.jpeg'  
+import silverjewishstar from '/media/silver-jewish-star.jpeg' 
+import ringsLogo from '/media/logo-ring.jpeg' 
+import necklacesLogo from '/media/logo-necklace.jpeg'  
+import earringsLogo from '/media/logo-ears.jpeg'  
+import braceletsLogo from '/media/logo-bracelet.jpeg'  
 
 // WhatsApp number for sharing (replace with your actual number)
 const WHATSAPP_NUMBER = '+972544281384'
@@ -20,21 +24,21 @@ interface JewelryItem {
 const jewelryItems: JewelryItem[] = [
   {
     id: 1,
-    name: 'שרשרת יהלום קלאסית',
-    description: 'שרשרת יהלום עדינה ואלגנטית, מושלמת לכל אירוע',
-    image: diamondring
+    name: 'טבעות מגן דוד',
+    description: 'טבעת מגן דוד זהב 14 קרט עם עיצוב חלק או חריטות יהלום',
+    image: silverjewishstar
   },
   {
     id: 2,
     name: 'טבעת זהב מעוצבת',
     description: 'טבעת זהב ייחודית בעיצוב מודרני',
-    image: goldenring
+    image: goldernwomanring
   },
   {
     id: 3,
-    name: 'עגילי פנינה יוקרתיים',
-    description: 'עגילי פנינה איכותיים בעיצוב קלאסי',
-    image: diamondearing
+    name: 'עגילי חישוק זהב יוקרתיים',
+    description: 'עגילי זהב צהוב איכותיים בעיצוב קלאסי',
+    image: golderncircleearings
   }
 ]
 
@@ -87,7 +91,7 @@ export function Page() {
                       className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors flex items-center"
                     >
                       <Share2 className="h-5 w-5 mr-2" />
-                      שתף בוואטסאפ
+                      קבל פרטים נוספים 
                     </button>
                   </div>
                 </div>
@@ -97,16 +101,28 @@ export function Page() {
         </section>
 
         <section>
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6">קטגוריות פופולריות</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['טבעות', 'שרשראות', 'עגילים', 'צמידים'].map((category) => (
-              <Link href="#" key={category} className="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
-                <Image src={`/placeholder.svg?height=100&width=100`} alt={category} width={100} height={100} className="w-20 h-20 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-800">{category}</h3>
-              </Link>
-            ))}
-          </div>
-        </section>
+  <h2 className="text-3xl font-semibold text-gray-800 mb-6">קטגוריות פופולריות</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {[
+      { name: 'טבעות', image: ringsLogo },
+      { name: 'שרשראות', image: necklacesLogo },
+      { name: 'עגילים', image: earringsLogo },
+      { name: 'צמידים', image: braceletsLogo }
+    ].map((category) => (
+      <Link href="#" key={category.name} className="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+        <Image 
+          src={category.image} 
+          alt={category.name} 
+          width={100} 
+          height={100} 
+          className="w-20 h-20 mx-auto mb-4" 
+        />
+        <h3 className="text-lg font-semibold text-gray-800">{category.name}</h3>
+      </Link>
+    ))}
+  </div>
+</section>
+
       </main>
 
       <footer className="bg-gray-800 text-white py-8 mt-12">
@@ -133,7 +149,7 @@ export function Page() {
             </div>
           </div>
           <div className="mt-8 text-center text-gray-400">
-            <p>&copy; 2023 ברקת. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 ברקת. כל הזכויות שמורות.</p>
           </div>
         </div>
       </footer>
