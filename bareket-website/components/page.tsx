@@ -5,6 +5,7 @@ import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import goldenring from '/media/goldern-ring.jpeg'
 import diamondring from '/media/diamond-ring.jpeg'
+import diamondearing from '/media/diamondearning.jpeg'
 
 // WhatsApp number for sharing (replace with your actual number)
 const WHATSAPP_NUMBER = '+972544281384'
@@ -33,7 +34,7 @@ const jewelryItems: JewelryItem[] = [
     id: 3,
     name: 'עגילי פנינה יוקרתיים',
     description: 'עגילי פנינה איכותיים בעיצוב קלאסי',
-    image: '/placeholder.svg?height=300&width=400'
+    image: diamondearing
   }
 ]
 
