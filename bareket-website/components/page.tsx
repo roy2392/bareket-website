@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // WhatsApp number for sharing (replace with your actual number)
-const WHATSAPP_NUMBER = '972123456789'
+const WHATSAPP_NUMBER = '+972544281384'
 
 interface JewelryItem {
   id: number
