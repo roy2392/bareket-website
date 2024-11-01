@@ -1,7 +1,7 @@
 'use client'
 
 import { ShoppingCart, Search, Menu, Share2 } from 'lucide-react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import goldenring from '/media/goldern-ring.jpeg'
 import diamondring from '/media/diamond-ring.jpeg'
