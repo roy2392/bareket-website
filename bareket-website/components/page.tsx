@@ -13,7 +13,7 @@ interface JewelryItem {
   id: number
   name: string
   description: string
-  image: any
+  image: StaticImageData
 }
 
 const jewelryItems: JewelryItem[] = [
