@@ -1,5 +1,4 @@
 'use client'
-
 import { ShoppingCart, Search, Menu, Share2 } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
